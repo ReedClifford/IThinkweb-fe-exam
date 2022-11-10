@@ -1,13 +1,105 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* NAVBAR */
+.navbar {
+  @apply flex justify-between items-center px-10 py-5 sticky top-0  z-20  border-b border-neutral-800
+   backdrop-blur-md bg-black/40;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.navbar-logo {
+  @apply text-neutral-300 font-bold text-3xl;
+}
+
+.navlinks-container {
+  @apply flex gap-5 text-neutral-400 font-medium text-base;
+}
+.active {
+  @apply text-white;
+}
+
+/* ABOUTME */
+.aboutme-card-container {
+  @apply flex sm:flex-col sm:mt-96  lg:mt-2 lg:flex-row justify-center items-center gap-2
+   container h-fit bg-neutral-900 shadow-lg shadow-black rounded-sm hover:scale-105 duration-300 ease-out;
+}
+.profile-photo-container {
+  @apply flex items-center justify-center;
+}
+.details-container {
+  @apply text-neutral-300 text-start   flex justify-center items-start p-2 gap-3 flex-col;
+}
+
+/* TABLE */
+.table {
+  @apply bg-neutral-900 container shadow-md shadow-black overflow-hidden;
+}
+.table-container {
+  @apply flex flex-col justify-center items-center;
+}
+.table-text-header-container {
+  @apply container flex justify-between items-center text-white my-10;
+}
+.table-head {
+  @apply bg-zinc-900 border py-2 px-6 text-center border-neutral-700;
+}
+.table-row {
+  @apply bg-neutral-900 px-6 text-white   hover:bg-stone-800 duration-700 ease-in-out;
+}
+.table-data {
+  @apply py-2 px-6 border border-neutral-700 text-center;
+}
+.navigate-btn-container {
+  @apply container flex justify-end text-neutral-200 my-2;
+}
+.table-navigate-btn {
+  @apply bg-gradient-to-tr from-zinc-900 to-neutral-900 border hover:bg-gradient-to-tr
+   hover:from-black hover:to-stone-900 duration-500 ease-in-out border-neutral-700 w-20 p-2;
+}
+.action-btn-container {
+  @apply flex gap-5 justify-center items-center border-none;
+}
+
+/* MODAL */
+.modal {
+  @apply fixed inset-0 h-full w-full backdrop-blur-sm bg-black/30 z-50
+  flex justify-center items-center overflow-hidden;
+}
+
+.modal-contents {
+  @apply w-96 h-fit bg-gradient-to-tl from-black to-stone-900 shadow-sm shadow-neutral-600 rounded-md
+  text-black border flex items-center justify-center flex-col border-black p-5;
+}
+
+/* BUTTONS */
+.action-delete-btn {
+  @apply bg-red-600 p-3 w-20 rounded-sm hover:bg-red-700 duration-300 ease-in-out;
+}
+.action-edit-btn {
+  @apply bg-green-600 p-3 w-20 rounded-sm  hover:bg-green-700 duration-300 ease-in-out;
+}
+
+.delete-modal-close-btn {
+  @apply w-32 bg-neutral-600 rounded-sm text-center text-white p-2 hover:bg-neutral-700 duration-300 ease-in-out cursor-pointer;
+}
+.create-modal-btn {
+  @apply w-32 rounded-sm bg-yellow-600 text-white p-2 hover:bg-yellow-700 duration-300 ease-in-out;
+}
+.create-new-user-btn {
+  @apply w-44 bg-yellow-500 p-2 hover:bg-yellow-600 duration-300 ease-in-out;
+}
+.update-modal-btn {
+  @apply w-32 bg-green-600 text-white p-2 hover:bg-green-700 duration-300 ease-in-out;
+}
+.delete-modal-delete-btn {
+  @apply w-32 bg-red-600 rounded-sm text-white p-2 hover:bg-red-700 hover:duration-300 ease-in-out;
+}
+
+/* FORM */
+.form {
+  @apply flex flex-col justify-center items-center gap-2 my-2  w-full p-7;
+}
+.inputs {
+  @apply p-2 w-full focus:outline-none;
 }
