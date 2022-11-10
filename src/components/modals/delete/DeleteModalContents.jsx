@@ -8,6 +8,7 @@ const DeleteModalContents = ({ fName, lName, avatar, email }) => {
   const closeModal = () => {
     setDeleteModalActive(!deleteModalActive);
   };
+
   return (
     <Fragment>
       <h1 className="font-semibold my-3 text-neutral-300">

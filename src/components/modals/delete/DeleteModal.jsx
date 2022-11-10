@@ -7,6 +7,7 @@ const DeleteModal = ({ selectedUser }) => {
       <div className="modal-contents">
         {DeletedModalContents ? (
           <DeleteModalContents
+            id={selectedUser.id}
             fName={selectedUser.first_name}
             lName={selectedUser.last_name}
             email={selectedUser.email}

@@ -1,5 +1,6 @@
 import { useContext, useState } from "react";
 import { UserContext } from "../../../contexts/users.contexts";
+
 const CreateUserModal = () => {
   const { createUserModalActive, setCreateUserModalActive } =
     useContext(UserContext);
@@ -27,6 +28,7 @@ const CreateUserModal = () => {
 
   const onSubmitHandler = (e) => {
     e.preventDefault();
+
     setCreateUserModalActive(!createUserModalActive);
   };
   return (
